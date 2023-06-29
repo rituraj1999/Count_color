@@ -1,0 +1,23 @@
+Function COUNTCOLOR(range_data As Range, criteria As Range) As Long
+
+
+Dim datax As Range ' delacring variable
+
+Dim xcolor As Long ' declaring variable
+
+xcolor = criteria.Interior.ColorIndex
+        
+        'For Loop
+        
+        For Each datax In range_data
+            
+        'condition IF
+        
+            If datax.Interior.ColorIndex = xcolor Then
+                COUNTCOLOR = COUNTCOLOR + 1
+            End If
+                
+        Next datax
+    
+
+End Function
